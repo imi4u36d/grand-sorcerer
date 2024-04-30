@@ -8,6 +8,10 @@ import Hagrid_image from "../assets/海格.jpg";
 import study_magic1 from "../assets/study-magic-1.jpg";
 import study_magic2 from "../assets/study-magic-2.jpg";
 import study_magic3 from "../assets/study-magic-3.jpg";
+import daily1 from "../assets/daily-1.webp";
+import daily2 from "../assets/daily-2.webp";
+import daily3 from "../assets/daily-3.webp";
+import daily4 from "../assets/daily-4.webp";
 
 // styles
 const teacher_image_style = {
@@ -26,7 +30,6 @@ const study_magic_style = {
   width: "auto",
   height: "300px",
 };
-
 
 </script>
 <template>
@@ -110,6 +113,25 @@ const study_magic_style = {
           <span>天文学</span>
           <span>魔法史</span>
           <span>飞行学</span>
+        </div>
+      </div>
+
+      <!-- 校园新闻 -->
+      <h2>校园新闻</h2>
+      <div class="school-news">
+        <div class="school-news-cover">
+          <div class="news">
+            <p>食死徒出现在麻瓜世界</p>
+            <img :src="daily1" class="dailys" :style="dailys">
+          </div>
+          <div class="news">
+            <p>突发，小天狼星被关入阿兹卡班</p>
+            <img :src="daily3" class="dailys">
+          </div>
+          <div class="news">
+            <p>这个男孩是谁？</p>
+            <img :src="daily4" class="dailys">
+          </div>
         </div>
       </div>
 
@@ -224,6 +246,51 @@ const study_magic_style = {
   display: flex;
   flex-direction: row;
   gap: 1rem;
+}
+
+.school-news {
+  width: 80%;
+
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.school-news-cover {
+  margin: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  animation: scroller 30s linear 0s infinite;
+}
+
+.school-news-cover:hover {
+  cursor: pointer;
+  animation-play-state: paused;
+}
+
+@keyframes scroller {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%)
+  }
+}
+
+
+.news {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.dailys {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
 }
 
 .footer {
