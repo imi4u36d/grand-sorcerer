@@ -82,21 +82,6 @@ const study_magic_style = {
           <img :src="Hagrid_image" :style="teacher_image_style" />
           <p>鲁伯特·海格（Rubeus Hagrid）是霍格沃茨的魔法生物学教授，他是一位非常善良的巫师，但是他也是一位非常激进的人。他是霍格沃茨的创始人之一，也是格兰芬多学院的创始人。</p>
         </div>
-
-        <div class="grand-sorcerer">
-          <img :src="Dumbledore_image" :style="teacher_image_style" />
-          <p>阿不思·邓布利多（Albus Dumbledore）是霍格沃茨的校长，他是一位非常有智慧的巫师，也是一位非常有爱心的人。他是霍格沃茨的创始人之一，也是格兰芬多学院的创始人。</p>
-        </div>
-
-        <div class="grand-sorcerer">
-          <img :src="McGonagall_image" :style="teacher_image_style" />
-          <p>米勒娃·麦格教授（Minerva McGonagall）是霍格沃茨的副校长，她是一位非常严格的老师，但是她也是一位非常有爱心的人。她是霍格沃茨的创始人之一，也是格兰芬多学院的创始人。</p>
-        </div>
-
-        <div class="grand-sorcerer">
-          <img :src="Snape_image" :style="teacher_image_style" />
-          <p>西弗勒斯·斯内普（Severus Snape）是霍格沃茨的魔药学教授，他是一位非常有才华的巫师，但是他也是一位非常复杂的人。他是霍格沃茨的创始人之一，也是格兰芬多学院的创始人。</p>
-        </div>
       </div>
 
       <!-- 入学指南 -->
@@ -217,31 +202,13 @@ const study_magic_style = {
 }
 
 .grand-sorcerer {
-  width: 200px;
   height: auto;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   align-items: center;
-  animation: teacher s linear 0s infinite;
-  overflow: hidden;
 }
 
-.grand-sorcerer:hover {
-  animation-play-state: paused;
-}
-
-@keyframes teacher {
-  from {
-
-    transform: translateY(-100%);
-  }
-
-  to {
-    transform: translateY(0);
-  }
-
-}
 
 .study_magic {
   display: flex;
