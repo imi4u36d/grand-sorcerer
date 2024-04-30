@@ -191,14 +191,11 @@ const study_magic_style = {
 }
 
 .grand-wizard {
-  height: 300px;
   width: 80%;
   margin: 2rem;
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  flex-wrap: wrap;
-  overflow-y: hidden;
 }
 
 .grand-sorcerer {
